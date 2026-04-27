@@ -1,0 +1,34 @@
+{
+  "name": "ytdl",
+  "version": "1.0.0",
+  "description": "YouTube downloader with layered fullstack structure",
+  "type": "module",
+  "main": "dist/server/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server/index.js",
+    "dev": "tsx watch src/server/index.ts"
+  },
+  "keywords": [
+    "youtube",
+    "downloader",
+    "express",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "youtube-dl-exec": "^3.0.25"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.2",
+    "ngrok": "^5.0.0-beta.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
