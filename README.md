@@ -1,4 +1,4 @@
-# ytDl
+# ytDownloader
 
 `ytDl` is a fullstack YouTube downloader built with Node.js, Express, and TypeScript.
 
