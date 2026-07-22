@@ -1,5 +1,5 @@
 {
-  "name": "ytdl",
+  "name": "ytDownloader",
   "version": "1.0.0",
   "description": "YouTube downloader with layered fullstack structure",
   "type": "module",
