@@ -43,7 +43,7 @@ async function onFetchInfo(e) {
   //     body: JSON.stringify({ url: currentUrl }),
   //   });
 
-  const response = await fetch(`/ api / info`, {
+  const response = await fetch(`/api/info`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
