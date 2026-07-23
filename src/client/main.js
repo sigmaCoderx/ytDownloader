@@ -36,7 +36,9 @@ async function onFetchInfo(e) {
   try {
     const response = await fetch(`${API_BASE}/api/info`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json",
+               "ngrok-skip-browser-warning": "true" // to allow the ngrok 
+                 },
       body: JSON.stringify({ url: currentUrl }),
     });
 
