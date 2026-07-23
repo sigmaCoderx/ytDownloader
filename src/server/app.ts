@@ -10,9 +10,10 @@ app.use(
     origin: [
       "http://localhost:4000",
       "http://127.0.0.1:5500",
-      "https://neuralytdl.vercel.app", // Allowed Vercel domain
+      "https://neuralytdl.vercel.app",
     ],
     methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "ngrok-skip-browser-warning"], // <-- Allow the header
   })
 );
 
