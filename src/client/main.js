@@ -14,7 +14,7 @@ let selectedType = null;
 let currentTitle = "";
 const API_BASE =
   window.location.protocol === "file:"
-    ? "http://localhost:4000"
+    ? "https://hamstring-eternity-impish.ngrok-free.dev"
     : window.location.origin;
 
 urlForm.addEventListener("submit", onFetchInfo);
