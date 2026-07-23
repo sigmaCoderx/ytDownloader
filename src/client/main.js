@@ -13,9 +13,9 @@ let currentUrl = "";
 let selectedType = null;
 let currentTitle = "";
 const API_BASE =
-  window.location.protocol === "file:"
-    ? "https://hamstring-eternity-impish.ngrok-free.dev" //BACKEND-URL
-    : window.location.origin;
+  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:4000"
+    : "https://hamstring-eternity-impish.ngrok-free.dev";
 
 urlForm.addEventListener("submit", onFetchInfo);
 videoOption.addEventListener("click", (e) => selectOption(e, "video"));
