@@ -5,7 +5,17 @@ import downloadRouter from "./routes/download.js";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:4000",
+      "http://127.0.0.1:5500",
+      "https://neuralytdl.vercel.app", // Allowed Vercel domain
+    ],
+    methods: ["GET", "POST"],
+  })
+);
+
 app.use(express.json());
 
 app.use("/api", downloadRouter);
