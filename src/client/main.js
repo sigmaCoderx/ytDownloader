@@ -33,7 +33,7 @@ async function onFetchInfo(e) {
   loading.classList.remove("hidden");
   result.classList.add("hidden");
 
-  // try {
+  try {
   //   const response = await fetch(`${API_BASE}/api/info`, {
   //     method: "POST",
   //     headers: {
