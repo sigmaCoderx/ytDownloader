@@ -69,6 +69,7 @@ async function runYoutubeDlWithFallback(
   }
 }
 
+// this function returns the metadata of the media
 export async function getVideoInfo(url: string): Promise<VideoInfo> {
   try {
     const info = (await runYoutubeDlWithFallback(url, {
