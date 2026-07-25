@@ -1,7 +1,30 @@
 {
+<<<<<<< HEAD
   "name": "ytDownloader",
   "version": "1.0.0",
   "description": "YouTube downloader with layered fullstack structure",
+=======
+  "name": "ytdownloader",
+  "version": "1.0.2",
+  "description": "YouTube downloader with layered fullstack structure",
+  "keywords": [
+    "youtube",
+    "ytDownloader",
+    "downloader",
+    "express",
+    "typescript"
+  ],
+  "homepage": "https://github.com/sigmaCoderx/ytDownloader#readme",
+  "bugs": {
+    "url": "https://github.com/sigmaCoderx/ytDownloader/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigmaCoderx/ytDownloader.git"
+  },
+  "license": "ISC",
+  "author": "flippedCoin",
+>>>>>>> 4cfecaf (fixed the broken code)
   "type": "module",
   "main": "dist/server/index.js",
   "scripts": {
@@ -9,6 +32,7 @@
     "start": "node dist/server/index.js",
     "dev": "tsx watch src/server/index.ts"
   },
+<<<<<<< HEAD
   "keywords": [
     "youtube",
     "downloader",
@@ -17,6 +41,8 @@
   ],
   "author": "",
   "license": "ISC",
+=======
+>>>>>>> 4cfecaf (fixed the broken code)
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",

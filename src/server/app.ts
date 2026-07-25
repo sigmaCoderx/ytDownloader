@@ -8,6 +8,7 @@ const app = express();
 app.use(
   cors({
     origin: [
+<<<<<<< HEAD
       "http://localhost:4000",
       "http://127.0.0.1:5500",
       "https://neuralytdl.vercel.app",
@@ -17,6 +18,16 @@ app.use(
   })
 );
 
+=======
+      "http://localhost:4000",// allow localhost for local development 
+      "https://neuralytdl.vercel.app" // allow Vercel to use
+    ],
+    methods: ["GET", "POST"]
+  })
+);
+
+
+>>>>>>> 4cfecaf (fixed the broken code)
 app.use(express.json());
 
 app.use("/api", downloadRouter);
