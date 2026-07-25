@@ -12,6 +12,8 @@ const downloadBtn = document.getElementById("downloadBtn");
 let currentUrl = "";
 let selectedType = null;
 let currentTitle = "";
+
+// PUT YOUR BACKEND URL
 const API_BASE =
   window.location.protocol === "file:"
     ? "http://localhost:4000"
