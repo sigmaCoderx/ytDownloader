@@ -105,6 +105,7 @@ export async function getVideoInfo(url: string): Promise<VideoInfo> {
   }
 }
 
+// this function downloads a media whether audio or video
 export async function downloadMedia(
   url: string,
   type: string,
