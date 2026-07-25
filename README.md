@@ -1,6 +1,6 @@
 # ytDownloader
 
-`ytDl` is a fullstack YouTube downloader built with Node.js, Express, and TypeScript.
+`ytDownloader`is a fullstack YouTube downloader built with Node.js, Express, and TypeScript.
 
 It supports:
 - video download as `mp4` (up to 720p)
