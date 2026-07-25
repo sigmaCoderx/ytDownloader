@@ -13,15 +13,9 @@ let currentUrl = "";
 let selectedType = null;
 let currentTitle = "";
 const API_BASE =
-<<<<<<< HEAD
-  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "http://localhost:4000"
-    : "https://hamstring-eternity-impish.ngrok-free.dev";
-=======
   window.location.protocol === "file:"
     ? "http://localhost:4000"
     : window.location.origin;
->>>>>>> 4cfecaf (fixed the broken code)
 
 urlForm.addEventListener("submit", onFetchInfo);
 videoOption.addEventListener("click", (e) => selectOption(e, "video"));
@@ -39,50 +33,6 @@ async function onFetchInfo(e) {
   loading.classList.remove("hidden");
   result.classList.add("hidden");
 
-<<<<<<< HEAD
-  
-  try {
-  //   const response = await fetch(`${API_BASE}/api/info`, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "ngrok-skip-browser-warning": "true" // to allow the ngrok
-  //     },
-  //     body: JSON.stringify({ url: currentUrl }),
-  //   });
-
-  const response = await fetch(`/api/info`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "ngrok-skip-browser-warning": "true" // to allow the ngrok
-    },
-    body: JSON.stringify({ url: currentUrl }),
-  });
-
-  if (!response.ok) {
-    const errorBody = await response.json().catch(() => ({}));
-    throw new Error(errorBody.error || "Failed to fetch info");
-  }
-
-  const info = await response.json();
-  currentTitle = info.title || "Untitled";
-  thumbnail.src = info.thumbnail || "";
-  titleNode.textContent = currentTitle;
-  channelNode.textContent = info.channel || "Unknown Channel";
-
-  selectedType = null;
-  downloadBtn.classList.add("hidden");
-  videoOption.classList.remove("border-red-600");
-  audioOption.classList.remove("border-red-600");
-  result.classList.remove("hidden");
-} catch (error) {
-  console.error(error);
-  alert(`Could not fetch video info: ${error.message || "Unknown error"}`);
-} finally {
-  loading.classList.add("hidden");
-}
-=======
   try {
     const response = await fetch(`${API_BASE}/api/info`, {
       method: "POST",
@@ -112,7 +62,6 @@ async function onFetchInfo(e) {
   } finally {
     loading.classList.add("hidden");
   }
->>>>>>> 4cfecaf (fixed the broken code)
 }
 
 function selectOption(e, type) {
@@ -136,11 +85,7 @@ async function startDownload() {
       url: currentUrl,
       type: selectedType,
     });
-<<<<<<< HEAD
-    a.href = `${API_BASE} / api / download ? ${params.toString()}`;
-=======
     a.href = `${API_BASE}/api/download?${params.toString()}`;
->>>>>>> 4cfecaf (fixed the broken code)
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
