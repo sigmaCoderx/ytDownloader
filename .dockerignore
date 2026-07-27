@@ -1,0 +1,9 @@
+
+
+node_modules/
+dist/
+.env
+.git
+downloads/*
+!downloads/.gitkeep
+src/client
