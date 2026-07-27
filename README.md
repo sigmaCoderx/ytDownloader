@@ -48,7 +48,7 @@ npm install
 npm run dev
 ```
 
-Open ib browser:
+Open in browser:
 
 - `http://localhost:4000`
 
