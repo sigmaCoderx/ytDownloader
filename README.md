@@ -62,6 +62,78 @@ npx ngrok http 4000
 
 Share the generated `https://...ngrok-free.dev` URL.
 
+## Docker
+
+This project supports Docker deployment.
+
+The Docker container includes:
+
+- Node.js runtime
+- Python 3 runtime
+- pytubefix
+- Application dependencies
+
+### Build Docker Image
+
+From the project root:
+
+```bash
+docker build -t ytdownloader-api .
+```
+
+### Run Container
+
+```bash
+docker run -d \
+  --name ytdownloader-api \
+  --restart always \
+  -p 4000:4000 \
+  ytdownloader-api
+```
+
+### Check Container Status
+
+```bash
+docker ps
+```
+
+### View Container Logs
+
+```bash
+docker logs ytdownloader-api
+```
+
+### Test API Health
+
+```bash
+curl http://localhost:4000/api/health
+```
+
+Expected response:
+
+```json
+{
+  "status": "ok"
+}
+```
+
+## Deployment
+
+The backend API can be deployed separately from the frontend.
+
+Recommended setup:
+
+```
+Frontend
+   |
+   | API requests
+   ↓
+Dockerized Express Backend
+```
+
+The frontend can be hosted on platforms like Vercel, while this backend runs on a server using Docker.
+
+
 ## Notes
 
 - Some YouTube requests may trigger anti-bot checks depending on IP/session; cookies can help.
