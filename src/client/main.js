@@ -18,7 +18,6 @@ let currentTitle = "";
 //   window.location.protocol === "file:"
 //     ? "http://localhost:4000"
 //     : window.location.origin;
-
 const API_BASE = "http://5.189.180.71:4000"; // backend production url
 
 urlForm.addEventListener("submit", onFetchInfo);
