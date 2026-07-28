@@ -12,10 +12,14 @@ const downloadBtn = document.getElementById("downloadBtn");
 let currentUrl = "";
 let selectedType = null;
 let currentTitle = "";
-const API_BASE =
-  window.location.protocol === "file:"
-    ? "http://localhost:4000"
-    : window.location.origin;
+
+// const API_BASE =
+//   window.location.protocol === "file:"
+//     ? "http://localhost:4000"
+//     : window.location.origin;
+// here you can put your base url like // "http://localhost:4000"
+
+const API_BASE = "https://5.189.180.71:4000"; // backend production url
 
 urlForm.addEventListener("submit", onFetchInfo);
 videoOption.addEventListener("click", (e) => selectOption(e, "video"));
