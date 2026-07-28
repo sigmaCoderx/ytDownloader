@@ -24,12 +24,12 @@ app.use(express.json());
 
 app.use("/api", downloadRouter);
 
-const clientDir = path.join(process.cwd(), "src", "client");
-app.use(express.static(clientDir));
+// const clientDir = path.join(process.cwd(), "src", "client");
+// app.use(express.static(clientDir));
 
-app.get("/", (_req, res) => {
-  res.sendFile(path.join(clientDir, "index.html"));
-});
+// app.get("/", (_req, res) => {
+//   res.sendFile(path.join(clientDir, "index.html"));
+// });
 
 app.get("/api/health", (_, res) => {
   res.status(200).json({
