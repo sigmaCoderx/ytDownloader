@@ -19,7 +19,7 @@ let currentTitle = "";
 //     ? "http://localhost:4000"
 //     : window.location.origin;
 
-const API_BASE = "https://5.189.180.71:4000"; // backend production url
+const API_BASE = "http://5.189.180.71:4000"; // backend production url
 
 urlForm.addEventListener("submit", onFetchInfo);
 videoOption.addEventListener("click", (e) => selectOption(e, "video"));
