@@ -9,7 +9,6 @@ app.use(
   cors({
     origin: [
       "http://localhost:4000",// allow localhost for local development 
-      "https://yt-downloader-d68w7tmal-sigmacoderxs-projects.vercel.app",
       "https://neuralytdl.vercel.app" // allow Vercel to use
     ],
     methods: ["GET", "POST"],
